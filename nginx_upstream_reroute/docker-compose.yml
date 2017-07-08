@@ -3,7 +3,8 @@ nginx:
     container_name: "nginx"
     command: /bin/bash -c "nginx -g 'daemon off;'"
     links:
-        - "pm2"
+        - "node1:node1"
+        - "node2:node2"
     ports:
         - "8080:8080"
 node1:
